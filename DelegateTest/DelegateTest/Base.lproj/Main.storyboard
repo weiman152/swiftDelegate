@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DelegateTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iZ-zm-HpE">
+                                <rect key="frame" x="161.5" y="20" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-3m-AcK">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="下一页"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I2E-5k-tS1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvQ-so-jh5">
+                                <rect key="frame" x="87.5" y="368.5" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.96444109071226591" blue="0.77218746088865797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dg4-Ld-Qxu"/>
+                                    <constraint firstAttribute="width" constant="200" id="kOR-hh-mfl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fH0-3m-AcK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AJT-Mn-ViV"/>
+                            <constraint firstItem="2iZ-zm-HpE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CYx-ZV-jbn"/>
+                            <constraint firstItem="mvQ-so-jh5" firstAttribute="centerX" secondItem="fH0-3m-AcK" secondAttribute="centerX" id="ReO-iG-a5m"/>
+                            <constraint firstItem="fH0-3m-AcK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TTr-dR-JVE"/>
+                            <constraint firstItem="mvQ-so-jh5" firstAttribute="top" secondItem="fH0-3m-AcK" secondAttribute="bottom" constant="20" id="X6Z-5Q-md0"/>
+                            <constraint firstItem="2iZ-zm-HpE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bqc-W8-TcG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="showTextLabel" destination="mvQ-so-jh5" id="bvI-14-PJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="DBd-jN-EMR">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="g6S-8H-CMV" customClass="NextViewController" customModule="DelegateTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z27-es-zee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第二页" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn6-4V-IS0">
+                                <rect key="frame" x="161.5" y="30" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈哈哈哈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGT-UQ-t8o">
+                                <rect key="frame" x="153" y="323" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-ll-9lB">
+                                <rect key="frame" x="16" y="25.5" width="31" height="30"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="back:" destination="g6S-8H-CMV" eventType="touchUpInside" id="S27-vc-FCG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nn6-4V-IS0" firstAttribute="centerY" secondItem="F8C-ll-9lB" secondAttribute="centerY" id="5RU-uL-MBs"/>
+                            <constraint firstItem="OGT-UQ-t8o" firstAttribute="centerX" secondItem="Z27-es-zee" secondAttribute="centerX" id="7s4-Dl-G73"/>
+                            <constraint firstItem="nn6-4V-IS0" firstAttribute="top" secondItem="UWA-3s-ffP" secondAttribute="top" constant="10" id="LFh-Zc-5hE"/>
+                            <constraint firstItem="OGT-UQ-t8o" firstAttribute="centerY" secondItem="Z27-es-zee" secondAttribute="centerY" id="RxU-jX-YWn"/>
+                            <constraint firstItem="F8C-ll-9lB" firstAttribute="leading" secondItem="UWA-3s-ffP" secondAttribute="leading" constant="16" id="YSz-dP-LpS"/>
+                            <constraint firstItem="nn6-4V-IS0" firstAttribute="centerX" secondItem="Z27-es-zee" secondAttribute="centerX" id="nqj-1M-ne4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UWA-3s-ffP"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContentStr" destination="OGT-UQ-t8o" id="0UG-Tn-7ux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBL-R7-iBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
